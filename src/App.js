@@ -39,17 +39,7 @@ const App = () => {
     autoplay: true,
     arrows: false
   };
-
-  const city = (loc) => {
-    const a = loc.split("/");
-    const city = a[2];
-    return city;
-  };
-  const state = (loc) => {
-    const a = loc.split("/");
-    const state = a[1];
-    return state;
-  };
+  
   return (
     <div className="app-container">
       <h1>Land Listings</h1>
@@ -134,7 +124,7 @@ const App = () => {
                     : ""}
                 </h3>
                 <p>
-                  {city(land.slug)} {state(land.slug)} (dt)
+                  {land.slug.split("/")[2]} {land.slug.split("/")[1]} (dt)
                 </p>
               </div>
             </div>
