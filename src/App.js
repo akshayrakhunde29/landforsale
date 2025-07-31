@@ -108,19 +108,19 @@ const App = () => {
               <div className="card-details">
                 <h3>
                   ₹{" "}
-                  {land.price_per_acre_crore.crore === 0
-                    ? `${land.price_per_acre_crore.lakh} lakhs for full property`
-                    : `${land.price_per_acre_crore.crore}${
-                        land.price_per_acre_crore.lakh !== 0
-                          ? "." + land.price_per_acre_crore.lakh
+                  {land?.price_per_acre === 0
+                    ? `${land?.total_price} lakhs for full property`
+                    : `${land?.price_per_acre}${
+                        land?.total_price !== 0
+                          ? "." + land?.total_price
                           : ""
                       } Cr/acre`}{" "}
                   •{" "}
-                  {land.total_land_size_in_acres.acres
-                    ? `${land.total_land_size_in_acres.acres} Acres`
+                  {land.price_per_acre
+                    ? `${land.price_per_acre} Acres`
                     : ""}{" "}
-                  {land.total_land_size_in_acres.guntas
-                    ? `${land.total_land_size_in_acres.guntas} Guntas`
+                  {land.total_land_size
+                    ? `${land.total_land_size} Guntas`
                     : ""}
                 </h3>
                 <p>
